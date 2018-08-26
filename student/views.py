@@ -9,6 +9,7 @@ from rest_framework.authentication import SessionAuthentication,BasicAuthenticat
 from rest_framework.permissions import IsAuthenticated,IsAdminUser,IsAuthenticatedOrReadOnly
 import json
 # Create your views here.
+#try to edit
 def details(request):
     try:
         if request.session['auth']=='Student' or request.session['auth']=='Parent' :
