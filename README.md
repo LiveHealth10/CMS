@@ -1,4 +1,2 @@
 # CollegeManagementSystem
-# Akash
-PYR
-DD
+
