@@ -1,0 +1,33 @@
+{% extends 'header.html' %}
+    {% block a %}
+
+ <form id="contact" method="POST" action="">
+        <h3>System Login</h3>
+        {% csrf_token %}
+         <fieldset> 
+        
+            {{ form.as_p }}
+          </fieldset>
+       
+        <fieldset>
+             
+           <input type="radio" name='auth' value="Student">
+            <label for="student">Student:</label>
+           
+           <input type="radio" name='auth' value="Parent">
+             <label for="parent">Parent:</label>
+            
+           <input type="radio" name='auth' value="Teacher">
+            <label for="Teacher">Teacher:</label>
+            
+        </fieldset>
+        
+        <fieldset>
+          <input name="submit" type="submit" value="Login" id="contact-submit" data-submit="...Sending">
+          <h4 align="center" ><a href="/admin">Admin</a></h4>
+          </fieldset>
+      </form>
+      
+
+
+    {% endblock %}

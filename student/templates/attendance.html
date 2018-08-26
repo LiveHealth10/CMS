@@ -1,0 +1,62 @@
+{% extends 'header1.html' %}
+{% block title %} Attendance {% endblock %}
+{% block homelink %} /home/student/{% endblock %}
+{% block b %}
+
+<div class="container-fluid text-center">    
+    <div class="row content">
+      <div class="col-sm-2 sidenav">
+  
+      </div>
+        
+      <div class="col-sm-8 text-left"> 
+          <table style='margin-top:50px' class="table table-bordered"  >
+              <thead>
+                <tr>
+                    <th>date</th>
+                    <th>Status</th>
+      
+                    
+                </tr>
+              </thead>
+              <tbody>
+                    <script>
+
+                      
+                        var data1='{{ lis1 }}';
+                        var d=JSON.parse(data1.replace(/&quot;/g,'"'));
+                        if(d.length<7){
+                        for (i = 0; i < d.length; i++) {
+                          document.write("<tr><td>" + d[i].date + "</td>");  
+                          document.write("<td>" + d[i].status + "</td></tr>");  
+                             
+                        }
+                        }
+                        else{
+                          for (i = 0; i < 6; i++) {
+                          document.write("<tr><td>" + d[i].date + "</td>");  
+                          document.write("<td>" + d[i].status + "</td></tr>");  
+                             
+                        }
+
+
+                        }
+                         
+                      </script>
+               
+              </tbody>
+            </table> 
+                  
+        
+      </div>
+        
+      <div class="col-sm-2 sidenav">
+        
+        <div class="well">
+          <p>ADS</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}
