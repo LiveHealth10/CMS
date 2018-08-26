@@ -1,1 +1,1 @@
-# COllegeManagementSystem
+# CollegeManagementSystem
